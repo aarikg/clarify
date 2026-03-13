@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "STEM Access Interpreter",
+  title: "Clarify",
   description: "Accessible tool for visually impaired students to read complex STEM materials.",
 };
 

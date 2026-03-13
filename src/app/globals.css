@@ -3,17 +3,61 @@
 @theme {
   --color-background: #000000;
   --color-foreground: #ffffff;
-  --color-primary: #ffff00;
+  --color-primary: #eab308;
+  /* A refined, sophisticated yellow (tailwind yellow-500) */
   --color-primary-foreground: #000000;
   --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), sans-serif;
-  font-size: 1.25rem; /* Large base font size for accessibility */
+  font-size: 1.25rem;
+  /* Large base font size for accessibility */
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism helpers */
+.glass {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* macOS Terminal Window helper */
+.macos-window-dots {
+  position: relative;
+  padding-top: 32px;
+  /* Space for the dots */
+}
+
+.macos-window-dots::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+  /* Red */
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  /* Yellow, Green */
 }
 
 /* Ensure focus states are highly visible */
